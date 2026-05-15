@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: selfmaster-ai
+    env: docker
+    plan: free
+    # The Dockerfile in the repository will be automatically detected and built.
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: DB_URL
+        sync: false # Paste your database URL here (e.g., jdbc:mysql://hostname:3306/dbname)
+      - key: DB_USERNAME
+        sync: false # Paste your database username
+      - key: DB_PASSWORD
+        sync: false # Paste your database password
+      - key: OPENAI_API_KEY
+        sync: false # Paste your OpenAI API Key
+      - key: JWT_SECRET
+        generateValue: true # Render will auto-generate a secure random string for JWT
