@@ -1,11 +1,20 @@
-FROM eclipse-temurin:17-jdk-alpine AS build
+# Stage 1: Build the application
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY pom.xml .
+# Download dependencies (this layer is cached)
+RUN mvn dependency:go-offline -B
 COPY src ./src
-RUN apk add --no-cache maven && mvn clean package -DskipTests
+# Build the application, skipping tests to speed up deployment
+RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:17-jre-alpine
+# Stage 2: Run the application
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/selfmaster-ai-1.0.0.jar app.jar
+
+# Expose port 8080
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Run the jar file with production profile activated
+ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=prod"]
