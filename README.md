@@ -11,7 +11,7 @@ An AI-Powered Behavioral Intelligence Platform built with Java Spring Boot that 
 | **Backend** | Java 17, Spring Boot 3.2.5, Spring Security, JPA/Hibernate |
 | **Authentication** | JWT (jjwt 0.12.5), BCrypt |
 | **Frontend** | Thymeleaf, HTML5, CSS3, JavaScript |
-| **Database** | MySQL 8.0 |
+| **Database** | PostgreSQL 15+ |
 | **Charts** | ApexCharts |
 | **AI** | OpenAI GPT-4o-mini API |
 | **Exports** | iText PDF, Apache POI (Excel) |
@@ -37,7 +37,7 @@ An AI-Powered Behavioral Intelligence Platform built with Java Spring Boot that 
 ### Prerequisites
 - Java 17+
 - Maven 3.8+
-- MySQL 8.0+
+- PostgreSQL 15+
 
 ### Quick Start
 
@@ -46,11 +46,11 @@ An AI-Powered Behavioral Intelligence Platform built with Java Spring Boot that 
 git clone <repo-url>
 cd LifeAI
 
-# 2. Create MySQL database
-mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS selfmaster_db;"
+# 2. Create PostgreSQL database
+psql -U postgres -c "CREATE DATABASE selfmaster_db;"
 
 # 3. Configure database (edit src/main/resources/application.properties)
-# Set your MySQL username/password
+# Set your PostgreSQL username/password
 
 # 4. (Optional) Set OpenAI API key
 export OPENAI_API_KEY=your-key-here
