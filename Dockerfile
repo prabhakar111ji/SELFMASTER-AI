@@ -4,7 +4,8 @@ WORKDIR /app
 COPY pom.xml .
 # Download dependencies (this layer is cached)
 RUN mvn dependency:go-offline -B
-COPY src ./src
+COPY backend ./backend
+COPY frontend ./frontend
 # Build the application, skipping tests to speed up deployment
 RUN mvn clean package -DskipTests
 
