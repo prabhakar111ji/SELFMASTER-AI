@@ -1,10 +1,10 @@
-# 🧠 SELFMASTER AI
+# SELFMASTER AI
 
 > **"Become the Master of Yourself."**
 
 An AI-Powered Behavioral Intelligence Platform built with Java Spring Boot that helps humans gain self-control, defeat procrastination, build discipline, and become the best version of themselves.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -17,7 +17,7 @@ An AI-Powered Behavioral Intelligence Platform built with Java Spring Boot that 
 | **Exports** | iText PDF, Apache POI (Excel) |
 | **Deployment** | Docker, Docker Compose |
 
-## 📋 Modules
+## Modules
 
 1. **Authentication System** - Register, Login, JWT, Password Reset
 2. **Goal Management** - SMART Goals, Milestones, Progress Tracking
@@ -32,7 +32,7 @@ An AI-Powered Behavioral Intelligence Platform built with Java Spring Boot that 
 11. **Life Analytics** - Charts, Graphs, Behavioral Trends
 12. **Challenges & Gamification** - XP, Levels, Badges, Streaks
 
-## 🛠️ Setup
+## Setup
 
 ### Prerequisites
 - Java 17+
@@ -74,7 +74,7 @@ docker-compose up -d
 # Access at http://localhost:8080
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/main/java/com/selfmaster/
@@ -98,7 +98,7 @@ src/main/resources/
     └── js/          app.js
 ```
 
-## 🔑 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -111,6 +111,6 @@ src/main/resources/
 | POST | `/api/focus/{id}/end` | End focus session |
 | POST | `/api/ai/chat` | AI Coach chat |
 
-## 📜 License
+## License
 
 Open Source - MIT License

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,12 @@
     <link rel="stylesheet" th:href="@{/css/main.css}"><link rel="stylesheet" th:href="@{/css/components.css}">
 </head>
 <body>
-    <nav class="navbar"><div class="container"><a href="/dashboard" class="navbar-brand"><i class="fas fa-brain"></i><span>SELF<span class="text-gradient">MASTER</span> AI</span></a>
+    <nav class="navbar"><div class="container"><a href="/dashboard" class="navbar-brand"><i class="fas fa-compass"></i><span>SELF<span class="text-gradient">MASTER</span> AI</span></a>
     <ul class="navbar-links"><li><span class="badge badge-primary"><i class="fas fa-star"></i> Level <span th:text="${user?.level ?: 1}"></span></span></li><li><a th:href="@{/auth/logout}" class="btn btn-ghost btn-sm"><i class="fas fa-sign-out-alt"></i> Logout</a></li></ul></div></nav>
     <div class="app-layout">
         <aside class="sidebar"><ul class="sidebar-nav"><li><a href="/dashboard"><i class="fas fa-th-large"></i> Dashboard</a></li><li><a href="/goals" class="active"><i class="fas fa-bullseye"></i> Goals</a></li><li><a href="/habits"><i class="fas fa-fire"></i> Habits</a></li><li><a href="/focus"><i class="fas fa-crosshairs"></i> Focus Timer</a></li></ul>
         <div class="sidebar-section">Self-Mastery</div><ul class="sidebar-nav"><li><a href="/accountability"><i class="fas fa-clipboard-check"></i> Accountability</a></li><li><a href="/emotions"><i class="fas fa-heart-pulse"></i> Emotional Log</a></li><li><a href="/journal"><i class="fas fa-book"></i> Journal</a></li><li><a href="/discipline"><i class="fas fa-shield-halved"></i> Discipline</a></li></ul>
-        <div class="sidebar-section">AI Intelligence</div><ul class="sidebar-nav"><li><a href="/ai-coach"><i class="fas fa-robot"></i> AI Life Coach</a></li><li><a href="/ai-decision"><i class="fas fa-scale-balanced"></i> Decision Support</a></li><li><a href="/challenges"><i class="fas fa-trophy"></i> Challenges</a></li></ul>
+        <div class="sidebar-section">AI Intelligence</div><ul class="sidebar-nav"><li><a href="/ai-coach"><i class="fas fa-user-tie"></i> Professional Coach</a></li><li><a href="/ai-decision"><i class="fas fa-scale-balanced"></i> Decision Support</a></li><li><a href="/challenges"><i class="fas fa-trophy"></i> Challenges</a></li></ul>
         <div class="sidebar-section">Reports</div><ul class="sidebar-nav"><li><a href="/analytics"><i class="fas fa-chart-bar"></i> Analytics</a></li><li><a href="/reports"><i class="fas fa-file-alt"></i> Reports</a></li><li><a href="/profile"><i class="fas fa-user-cog"></i> Profile</a></li></ul></aside>
 
         <main class="main-content">
@@ -88,3 +88,4 @@
     </script>
 </body>
 </html>
+
